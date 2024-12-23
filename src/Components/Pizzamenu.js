@@ -10,9 +10,9 @@ function Menu() {
       <main className="menu">
         <h2>OUR MENU</h2>
         <ul>
-          {pizzaData.map((pizza) => (
-            <Pizza pizzaObj = {pizza} key={pizza.id} />
-          ))}
+          {/* {pizzaData.map((pizza) => (
+             <Pizza pizzaObj = {pizza} key={pizza.id} />
+          ))} */}
         </ul>
       </main>
     </container-fluid>

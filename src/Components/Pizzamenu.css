@@ -1,0 +1,11 @@
+*{
+    margin: none;
+    padding: none;
+}
+
+.menu{
+    background-image: url(../Images/pizzatable.jpg);
+    background-size: cover;
+    width: 50rem;
+    height: auto;
+}
