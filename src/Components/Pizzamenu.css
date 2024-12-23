@@ -1,11 +1,49 @@
 *{
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
 }
-
+.pizza-bar{
+    margin: 3rem;
+    border: 1px solid red;
+}
 .menu{
-    background-image: url(../Images/pizzatable.jpg);
+    background-image:url(../Images/pizzatemplate.jpeg) ;
     background-size: cover;
-    width: 50rem;
-    height: auto;
+    width: 51rem;
+    height: 72rem;
+    border: 3px solid #FFECC8;
+    margin:0 7rem 0 10rem;
+}
+.menu-data{
+    border: 8px solid #FFFDEC;
+    margin: 6.6rem 7.2rem 0 7.2rem;
+    background-color: #A66E38;
+    height: 59rem;
+    color: whitesmoke;
+    padding: 0.5rem;
+}
+#our-menu{
+    border-top: 3px solid whitesmoke;
+    border-bottom: 3px solid whitesmoke;
+    font-size: 1rem;
+    width: 7rem;
+    margin: 0 0 0 14rem;
+}
+.pizza{
+    display: flex;
+}
+.img-data{
+    margin: 0.5rem 0.5rem 0 0;
+    display: flex;
+    font-size: 0.95rem;
+    border: 1px solid whitesmoke;
+    border: hidden;
+}
+img{
+    
+    width: 7rem;
+    height: 8rem;
+}
+.data{
+    padding: 0.3rem;
 }
