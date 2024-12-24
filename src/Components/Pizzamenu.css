@@ -2,10 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.pizza-bar{
-    margin: 3rem;
-    border: 1px solid red;
-}
+
 .menu{
     background-image:url(../Images/pizzatemplate.jpeg) ;
     background-size: cover;
@@ -46,4 +43,18 @@ img{
 }
 .data{
     padding: 0.3rem;
+    font-family: Playfair Display;
+}
+.order{
+    align-items: end;
+}
+button{
+    align-items: center;
+    margin: 0 20rem 1rem 33rem;
+}
+#name-pizzabar{
+    margin-left: 22rem;
+}
+#name{
+    margin-left: 30rem;
 }
