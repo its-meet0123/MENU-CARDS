@@ -1,17 +1,18 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { skills } from "./Componentdata.js";
 
 function ProfileCard (props){
     return(
-        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="UDAMYgit2/pizza/src/Images/sukh.jpg" />
+        <Card style={{ width: '24rem' }} className="card">
+         <Avtar />
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
-        <Card.Text>
+        < div className="Card-Text">
           <Intro />
           <Skillist />
-        </Card.Text>
+        </div>
         <Button variant="primary">See more</Button>
       </Card.Body>
     </Card>
@@ -20,36 +21,37 @@ function ProfileCard (props){
 
 function Avtar(){
  return(
-    <img className="Card.Img" src="" alt="SATNAME SINGH"></img>
+  <Card.Img variant="top" src="./Image/naveen.jpg" />
  )
 }
 
 function Intro(){
     return(
-        <div>
-            <p>We live in backward ariya</p>
-        </div>
+        <>
+            <p>Live in ANUPGARH city of SGNR</p>
+        </>
     );
 }
 
 function Skillist(){
     return(
-      <div className="ListGroup-Item">
-        <Skill name = '12th' emoji = '😎' id = "Non Medical" color = "#FB4141" />
-        
-        <Skill name ='B.sc Math' emoji ='🙂' id = 'Graduate' color = "#F26B0F" />
-      
-        <Skill name ='M.sc Math' emoji ="😌" id = 'Post Graduate' color = "#FA4032" />
+      <div className="Skill-list">
+       {skills.map((skill) =>(
+        <Skill skill = {skill.skill} color = {skill.color} level = {skill.level} subject = {skill.subject}  key={skill.skill}/>
+       ))}
       </div>
     );
 }
 
-function Skill(props){
+function Skill({skill, subject, color, level}){
     return(
-  <div className="skil" style={{backgroundColor:props.color}}>
-  <span>{props.id} in </span>
-  <span>{props.name}</span>
-  <span>{props.emoji}</span>
+  <div className="skil" style={{backgroundColor:color}}>
+  <span id="skill">{skill}</span>
+  <span id="skill">{subject}</span>
+  <span id="skill">{level === "strong" && "💪"}
+  {level === "normal" && "🙂"}
+  {level === "not known" && "👶"}
+  </span>
   </div>
     )
 }

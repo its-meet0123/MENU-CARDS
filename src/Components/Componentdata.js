@@ -46,4 +46,55 @@ const pizzaData = [
       
 ]
 
-export {pizzaData};
+
+
+const skills = [
+    {
+        skill:"12th",
+        subject: "non-medical",
+        color: "#2662EA",
+        level: "strong"
+        
+    },
+    {
+        skill:"B.sc",
+        subject: "chemistry",
+        color: "#EFD81D",
+        level: "strong"
+    },
+    {
+        skill:"M.sc",
+        subject: "mathmatics",
+        color: "#C3DCAF",
+        level: "strong"
+    },
+    {
+        skill:"Bankers",
+        subject: "all",
+        color: "#E84F33",
+        level: "normal"
+    },
+    {
+        skill:"React",
+        subject: "normal",
+        color: "#60DAFB",
+        level: "not known"
+    },
+    {
+        skill:"Svelte",
+        subject: "bignners",
+        color: "#FF3800",
+        level: "not known"
+    },
+]
+
+
+const messages = [
+    
+        "Learn React ⚛",
+        "Apply for Jobs 💼",
+        "Invest your new Income 🤑"
+    
+]
+
+export {pizzaData,skills,messages};

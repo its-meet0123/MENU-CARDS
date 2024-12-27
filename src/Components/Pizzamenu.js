@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Pizzamenu.css";
-import { pizzaData } from "./Pizzadata.js";
+import { pizzaData } from "./Componentdata.js";
 
 function Menu() {
   const pizzas = pizzaData;
@@ -56,17 +56,40 @@ function Pizza(props) {
 function Footer(){
   const hour = new Date().getHours();
   const openHour = 9;
-  const closeHour = 24;
+  const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
+ console.log(isOpen);
+ //if(hour >= closeHour && hour >= openHour)
+ // if(hour >= openHour && hour <= closeHour)
+ 
 
   return(
-    <footer className="footer">{isOpen && 
-    <div className="order">
-      <p className="text-secondary" id="name">We're <b>open</b> until {closeHour}:00.</p>
-      <button type="button" className="btn btn-warning">Order</button>
-      </div>
+    <footer className="footer">
+      {/* {isOpen && */}
+     {isOpen ?
+      (<div className="order">
+       <p className="text-secondary" id="name">We're <b>open</b> until {closeHour}:00.</p>
+       <Time />
+       <button type="button" className="btn btn-warning" id="button">Order</button>
+      </div>):(
+        <p className="text-secondary" id="name">Visit in {openHour}:00<sub>AM</sub> to {closeHour}:00 <sub>PM</sub>.</p>
+      )
       }
-      </footer>
+      
+    </footer>
+  )
+}
+
+function Time(){
+  const[time, setTime] = React.useState(new Date().toLocaleTimeString());
+
+  React.useEffect(function(){
+    setInterval(function(){
+      setTime(new Date().toLocaleTimeString());
+    },1000);
+  },[]);
+
+  return(
+    <p className="text-secondary" id="name">It's Time {time}</p>
   )
 }

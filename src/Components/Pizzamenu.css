@@ -48,7 +48,7 @@ img{
 .order{
     align-items: end;
 }
-button{
+#button{
     align-items: center;
     margin: 0 20rem 1rem 33rem;
 }
@@ -57,4 +57,66 @@ button{
 }
 #name{
     margin-left: 30rem;
+    font-weight: 600;
 }
+
+/* profile cards */
+
+.card{
+    margin: 0 10rem 0 10rem;
+    background-color: antiquewhite;
+}
+
+.skil{
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    width: fit-content;
+    display: inline-flex;
+    border-radius: 7px;
+}
+#skill{
+    padding: 0rem 0.1rem 0 0.1rem;
+}
+
+
+/* Threestpes */
+
+.steps{
+    margin: 1rem 12rem 1rem 12rem ;
+    border: 1px solid blue;
+    background-color: #F4EDD3;
+    
+   
+}
+
+.numbers{
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.message{
+    text-align: center;
+    width: fit-content;
+    margin: 2rem 10rem 2rem 10rem  ;
+    align-content: center;
+
+   
+    
+
+}
+
+#circle{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+}
+
